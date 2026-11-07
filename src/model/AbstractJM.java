@@ -144,5 +144,4 @@ public abstract class AbstractJM {
     public int getImageHeight() {
         return imageHeight;
     }
-
 }

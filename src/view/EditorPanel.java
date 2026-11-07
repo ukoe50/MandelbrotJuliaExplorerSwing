@@ -10,7 +10,6 @@ import java.util.Observable;
 import java.util.Observer;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
-
 import model.Model;
 import utils.TypeFormatter;
 
@@ -283,9 +282,8 @@ public class EditorPanel extends JPanel implements Observer{
                 model.writeImage();
                 
             }});
-
-
     }    
+
     public void update(Observable arg0, Object arg1) {
         txt_iterations.setText(TypeFormatter.formatInt(model.getActiveObject().getMax_iter(),4));
         if (model.getPaintMode() == Model.MANDELBROT)
@@ -301,7 +299,6 @@ public class EditorPanel extends JPanel implements Observer{
         txt_clickedPReal.setText(TypeFormatter.formatDouble(model.getClickedReal(),18));
         txt_clickedPImag.setText(TypeFormatter.formatDouble(model.getClickedImag(),18));
     }
-    
     
     /**
      * This method initializes textField    

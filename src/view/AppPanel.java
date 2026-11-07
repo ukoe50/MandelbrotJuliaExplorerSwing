@@ -2,9 +2,7 @@ package view;
 
 import java.awt.Color;
 import java.awt.Rectangle;
-
 import javax.swing.JPanel;
-
 import model.JuliaSet;
 import model.Mandelbrot;
 import model.Model;
@@ -33,5 +31,4 @@ public class AppPanel extends JPanel {
         model.setTriggerRepaint(false);
         model.updateObservers();
     }
-
 }

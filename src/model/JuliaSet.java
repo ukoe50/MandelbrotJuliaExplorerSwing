@@ -52,12 +52,7 @@ public class JuliaSet extends AbstractJM {
 
                 g.setColor(new Color(red,green,blue));
                 g.drawLine(x, y, x, y);                
-
             }
         }
-        
     }
-
- 
-
 }

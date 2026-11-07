@@ -13,24 +13,20 @@ import java.util.Observer;
 import javax.swing.JPanel;
 import model.Model;
 
-
 class GraphicPanel extends JPanel implements Observer{
-    
     Model model;
-
     int mouseX, mouseY;
     int MouseButton = 0;
     int xStart, yStart, xEnd, yEnd, lastXEnd, lastYEnd;
-    
     
     public void update(Observable arg0, Object arg1) {
         if (model.isTriggerRepaint()){
             if (model.getActiveObject() != null)
                 model.getActiveObject().createImage();
             repaint();
-            
         }
     }   
+
     public GraphicPanel(Model model){
         this.model = model;
         setPreferredSize(new Dimension(5000,5000));
@@ -38,6 +34,7 @@ class GraphicPanel extends JPanel implements Observer{
         setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.SoftBevelBorder.LOWERED));
         init();
     }
+    
     public GraphicPanel(Model model, int x, int y, int w, int h){
         this.model = model;
         setLayout(null);
@@ -45,11 +42,12 @@ class GraphicPanel extends JPanel implements Observer{
         setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.SoftBevelBorder.LOWERED));
         init();
     }
+    
     public void init(){
         addMouseListener(new MyMouseListener());
         addMouseMotionListener(new MyMouseMotionListener());
- 
     }       
+ 
     public void setDefaults(){
         xStart=0;
         yStart=0;
@@ -65,10 +63,7 @@ class GraphicPanel extends JPanel implements Observer{
         model.setTriggerRepaint(false);
     }
     
-
-    
     private void paintZoomInRect(Graphics g){
-        
     }
 
     /**
@@ -89,6 +84,7 @@ class GraphicPanel extends JPanel implements Observer{
         public void mouseMoved(MouseEvent event) {
         }
     }
+    
     /**
      * innere Klasse MyMouseListener
      */
@@ -153,10 +149,6 @@ class GraphicPanel extends JPanel implements Observer{
                 model.setTriggerRepaint(true);
                 model.updateObservers();
             }
-    
         }
     }
- 
-
- 
 }

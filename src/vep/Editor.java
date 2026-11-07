@@ -53,6 +53,7 @@ public class Editor {
     private JLabel jLabel15 = null;
     private JButton jButton1 = null;
     private JButton jButton2 = null;
+    
     /**
      * This method initializes jPanel	
      * 	
@@ -71,7 +72,7 @@ public class Editor {
             jLabel14 = new JLabel();
             jLabel14.setBounds(new java.awt.Rectangle(16,727,199,16));
             jLabel14.setFont(new java.awt.Font("Dialog", java.awt.Font.ITALIC, 11));
-            jLabel14.setText("by Uwe Köhler. 2006");
+            jLabel14.setText("by Uwe Kï¿½hler. 2006");
             jLabel13 = new JLabel();
             jLabel13.setBounds(new java.awt.Rectangle(15,650,104,19));
             jLabel13.setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 11));

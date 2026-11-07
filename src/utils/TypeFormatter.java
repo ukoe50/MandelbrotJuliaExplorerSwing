@@ -6,7 +6,7 @@ package utils;
 import java.util.StringTokenizer;
 
 /**
- * Stellt Methoden zur Formatierung von Java-Datentypen zur Verfügung
+ * Stellt Methoden zur Formatierung von Java-Datentypen zur Verfï¿½gung
  */
 public class TypeFormatter {
     
@@ -39,8 +39,8 @@ public class TypeFormatter {
             }
         }
         return retStr;
-        
     }
+
     /**
      * Double Rundung auf 2 Nachkommastellen
      */
@@ -97,6 +97,7 @@ public class TypeFormatter {
         //System.out.println(d);
         return d;
     }
+    
     /**
      * Checks if a string is a valid integer
      */
@@ -122,5 +123,4 @@ public class TypeFormatter {
         }
         return s;
     }
-    
 }

@@ -61,7 +61,6 @@ public class Mandelbrot extends AbstractJM {
                 //green = 0;
                 blue = (int)(255-255/div);
                 
-                
                 if (colHelp < 32)
                     green = (int)(8*colHelp);
                 else if (colHelp < 64)
@@ -70,17 +69,10 @@ public class Mandelbrot extends AbstractJM {
                     green = (int)(2*colHelp);
                 else if (colHelp < 256)
                     green = (int)colHelp;
-                
 
                 g.setColor(new Color(red,green,blue));
                 g.drawLine(x, y, x, y);
             }
         }
-       
     }
-
-
-    
-    
-
 }

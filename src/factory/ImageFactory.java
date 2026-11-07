@@ -7,8 +7,6 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-
-
 /**
  * Creating BufferedImages with Java Graphics2D
  */

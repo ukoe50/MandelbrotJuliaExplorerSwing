@@ -25,53 +25,48 @@ public class Model extends Observable {
     public static final int MANDELBROT = 1;
     public static final int JULIA_MENGE = 2;
     public static final int ZOOMRECT = 3;
-    
     private Mandelbrot mandelbrot;
     private JuliaSet juliaSet;
     private AbstractJM activeObject;
-    
     private double clickedReal;
     private double clickedImag;
     private String filepath;
     private int writeImageWidth;
     private int writeImageHeight;
-    
     private int paintMode;
     private boolean triggerRepaint;
     
-    
     public Model(){}
-    
 
     public void updateObservers(){
         setChanged();
         notifyObservers();
-        
     }
     
-    
     // Methods who register the changes
- 
-
     public void setPaintMode(int paintMode) {
         this.paintMode = paintMode;
     }
+    
     public int getPaintMode() {
         return paintMode;
     }
+    
     public void setTriggerRepaint(boolean triggerRepaint) {
         this.triggerRepaint = triggerRepaint;
     }
+    
     public boolean isTriggerRepaint() {
         return triggerRepaint;
     }
-
     public void setClickedReal(double clickedReal) {
         this.clickedReal = clickedReal;
     }
+    
     public double getClickedReal() {
         return clickedReal;
     }
+    
     public void setClickedImag(double clickedImag) {
         this.clickedImag = clickedImag;
     }
@@ -79,36 +74,29 @@ public class Model extends Observable {
         return clickedImag;
     }
 
-
     public void setActiveObject(AbstractJM activeObject) {
         this.activeObject = activeObject;
     }
-
 
     public AbstractJM getActiveObject() {
         return activeObject;
     }
 
-
     public void setMandelbrot(Mandelbrot mandelbrot) {
         this.mandelbrot = mandelbrot;
     }
-
 
     public Mandelbrot getMandelbrot() {
         return mandelbrot;
     }
 
-
     public void setJuliaSet(JuliaSet juliaSet) {
         this.juliaSet = juliaSet;
     }
 
-
     public JuliaSet getJuliaSet() {
         return juliaSet;
     }
-
 
     public void writeImage() {
         FileOutputStream out = null;
@@ -147,33 +135,27 @@ public class Model extends Observable {
             e.printStackTrace();
         }
         System.out.println("Image written");
-       
     }
 
     public void setFilepath(String filepath) {
         this.filepath = filepath;
     }
 
-
     public String getFilepath() {
         return filepath;
     }
-
 
     public void setWriteImageWidth(int writeImageWidth) {
         this.writeImageWidth = writeImageWidth;
     }
 
-
     public int getWriteImageWidth() {
         return writeImageWidth;
     }
 
-
     public void setWriteImageHeight(int writeImageHeight) {
         this.writeImageHeight = writeImageHeight;
     }
-
 
     public int getWriteImageHeight() {
         return writeImageHeight;
